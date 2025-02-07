@@ -1,0 +1,262 @@
+<!-- CRIO_SOLUTION_START_MODULE_ONE -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Multi-step form</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="container">
+        <div class="sidebar">
+          <div class="indicator">
+            <div class="num">1</div>
+            <div class="text">
+              <p class="subtitle">Step 1</p>
+              <p class="title">Your Info</p>
+            </div>
+          </div>
+
+          <div class="indicator">
+            <div class="num 2">2</div>
+            <div class="text">
+              <p class="subtitle">Step 2</p>
+              <p class="title">Select Plan</p>
+            </div>
+          </div>
+
+          <div class="indicator">
+            <div class="num 3">3</div>
+            <div class="text">
+              <p class="subtitle">Step 3</p>
+              <p class="title">Add-ons</p>
+            </div>
+          </div>
+
+          <div class="indicator">
+            <div class="num 4">4</div>
+            <div class="text">
+              <p class="subtitle">Step 4</p>
+              <p class="title">Summary</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="steps_container">
+          <!-- Step 1 -->
+          <form class="step" id="form">
+            <h3 class="form_title">Personal Info</h3>
+            <p class="description">
+              Please provide your name, email address, and phone number.
+            </p>
+
+            <ul class="list">
+              <li class="list_item">
+                <div class="input_label">
+                  <p class="label">Name</p>
+                  <p class="warning"></p>
+                </div>
+                <input
+                  type="text"
+                  name="userName"
+                  class="input"
+                  placeholder="e.g. Stephen King"
+                  required
+                />
+              </li>
+
+              <li class="list_item">
+                <div class="input_label">
+                  <p class="label">Email Address</p>
+                  <p class="warning"></p>
+                </div>
+                <input
+                  type="email"
+                  name="email"
+                  class="input"
+                  placeholder="e.g. stephenking@lorem.com"
+                  required
+                />
+              </li>
+
+              <li class="list_item">
+                <div class="input_label">
+                  <p class="label">Phone Number</p>
+                  <p class="warning"></p>
+                </div>
+                <input
+                  type="number"
+                  name="phone"
+                  class="input"
+                  placeholder="e.g. 7894561230"
+                  required
+                />
+              </li>
+            </ul>
+          </form>
+          <!-- step 2 -->
+
+          <div class="step" id="step-2">
+            <h3 class="step2_title">Select Your Plan</h3>
+            <p class="description">
+              You have the option of monthly or yearly billing
+            </p>
+            <div class="plan_card_container" id="plan-cards">
+              <div class="plan_card card">
+                <div class="card_img">
+                  <img src="./assets/images/icon-arcade.svg" alt="arcade" />
+                </div>
+                <div class="plan_price">
+                  <p class="card_name" id="arcade">Arcade</p>
+                  <p class="card_price">
+                    $<span class="subscription_price">00</span>/
+                    <span class="subscription_duration">xx</span>
+                  </p>
+                  <p class="yearly_benefit">2 months free</p>
+                </div>
+              </div>
+
+              <div class="plan_card card">
+                <div class="card_img">
+                  <img src="./assets/images/icon-advanced.svg" alt="arcade" />
+                </div>
+                <div class="plan_price">
+                  <p class="card_name" id="arcade">Advance</p>
+                  <p class="card_price">
+                    $<span class="subscription_price">00</span>/
+                    <span class="subscription_duration">xx</span>
+                  </p>
+                  <p class="yearly_benefit">2 months free</p>
+                </div>
+              </div>
+
+              <div class="plan_card card">
+                <div class="card_img">
+                  <img src="./assets/images/icon-pro.svg" alt="arcade" />
+                </div>
+                <div class="plan_price">
+                  <p class="card_name" id="arcade">Pro</p>
+                  <p class="card_price">
+                    $<span class="subscription_price">00</span>/
+                    <span class="subscription_duration">xx</span>
+                  </p>
+                  <p class="yearly_benefit">2 months free</p>
+                </div>
+              </div>
+            </div>
+
+            <p id="select-plan-error"></p>
+
+            <div class="toggle_container">
+              <p class="monthly_plan selected_plan" id="monthly">Monthly</p>
+              <div class="toggle">
+                <div class="toggle_circle" id="toggle"></div>
+              </div>
+              <p class="yearly_plan" id="yearly">Yearly</p>
+            </div>
+          </div>
+          <!-- Step 3 -->
+          <div class="step" id="step-3">
+            <h3 class="main_title">Pick add-ons</h3>
+            <p class="description">
+              Add-ons help enhance your gaming experience.
+            </p>
+            <div class="addson_card_container">
+              <div class="addon_card card">
+                <input type="checkbox" name="checkbox" id="" class="checkbox" />
+                <div class="card_text">
+                  <p class="card_name">Online Services</p>
+                  <p class="card_description">Access to multiplayer games</p>
+                </div>
+                <p class="card_price">
+                  +$<span class="subscription_price">00</span>/<span
+                    class="subscription_duration"
+                    >xx</span
+                  >
+                </p>
+              </div>
+              <div class="addon_card card">
+                <input type="checkbox" name="checkbox" id="" class="checkbox" />
+                <div class="card_text">
+                  <p class="card_name">Larger Storage</p>
+                  <p class="card_description">Extra 1TB of cloud save</p>
+                </div>
+                <p class="card_price">
+                  +$<span class="subscription_price">00</span>/<span
+                    class="subscription_duration"
+                    >xx</span
+                  >
+                </p>
+              </div>
+              <div class="addon_card card">
+                <input type="checkbox" name="checkbox" id="" class="checkbox" />
+                <div class="card_text">
+                  <p class="card_name">Customizable Profit</p>
+                  <p class="card_description">Custom theme on your profile</p>
+                </div>
+                <p class="card_price">
+                  +$<span class="subscription_price">00</span>/<span
+                    class="subscription_duration"
+                    >xx</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Step - 4 -->
+          <div class="step" id="step-4">
+            <h3 class="main_title">Finishing up</h3>
+            <p class="description">
+              Double-check everything looks OK before confirming.
+            </p>
+            <div class="finishingup_card_container card">
+              <div class="selected_plan_container">
+                <div id="selected-plan"></div>
+                <button class="change_plan" id="change-plan">change</button>
+              </div>
+              <ul id="selected-addon"></ul>
+            </div>
+            <div class="total" id="total"></div>
+          </div>
+
+          <!-- last step -->
+          <div class="step last_step" id="thank-you">
+            <div class="final_img">
+              <img src="./assets/images/icon-thank-you.svg" alt="thank-you" />
+            </div>
+            <h3 class="main_title">Thank You!</h3>
+            <p class="description">
+              Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free to
+              email us at support@loremgaming.com.
+            </p>
+          </div>
+          <div class="button_container">
+            <button id="prev-button" class="button prev_button">Go Back</button>
+            <button type="submit" id="next-button" class="button next_button">
+              Next Step
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Step 5 end -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://crio.do" target="_blank">CrioDo</a>. Coded by
+      <a href="https://github.com/imketan1610" target="_blank">Ketan </a>.
+    </div>
+  </body>
+</html>
+<script src="./scripts.js"></script>
+<!-- CRIO_SOLUTION_END_MODULE_ONE -->
